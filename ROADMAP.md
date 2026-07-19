@@ -214,7 +214,7 @@ Instead, NorthStar-Comms complements these systems through planning, documentati
 
 ## Status
 
-🟢 In Progress
+🔵 Complete
 
 ## Goal
 
@@ -225,11 +225,11 @@ Create the project infrastructure and development standards.
 - [x] Repository creation
 - [x] README.md
 - [x] CHANGELOG.md
-- [ ] ROADMAP.md
-- [ ] LICENSE
-- [ ] .gitignore
-- [ ] Folder structure
-- [ ] Initial project release
+- [x] ROADMAP.md
+- [x] LICENSE
+- [x] .gitignore
+- [x] Folder structure
+- [x] Initial project release
 
 ## Definition of Done
 
@@ -240,12 +240,12 @@ Milestone 0 is complete when:
 - [x] README.md completed
 - [x] CHANGELOG.md completed
 - [x] ROADMAP.md completed
-- [ ] LICENSE committed
-- [ ] .gitignore committed
-- [ ] Initial folder structure committed
-- [ ] GitHub Project board configured
-- [ ] Initial Issues created
-- [ ] Repository tagged as **v0.1.0**
+- [x] LICENSE committed
+- [x] .gitignore committed
+- [x] Initial folder structure committed
+- [x] GitHub Project board configured
+- [x] Initial Issues created
+- [x] Repository tagged as **v0.1.0**
 - [ ] Repository successfully cloned and synchronized using GitHub Desktop
 
 ## Completion Target
