@@ -36,30 +36,62 @@ Desktop.ini
 .DS_Store
 
 # -------------------------
-# Excel Temporary Files
+# Excel Temporary / Lock Files
 # -------------------------
 ~$*.xlsx
 ~$*.xls
+~$*.xlsm
 *.tmp
 
 # -------------------------
-# Python Build Files
+# Python Build / Packaging
 # -------------------------
 build/
 dist/
 
 # -------------------------
-# Log Files
+# Logs
 # -------------------------
 *.log
 
 # -------------------------
-# Generated Release Files
+# Cache / Test Artifacts
 # -------------------------
-Releases/*.zip
+.pytest_cache/
+.coverage
+htmlcov/
 
 # -------------------------
-# Local Test Data
+# Local Scratch / Test Data
 # -------------------------
-testing/
 scratch/
+local_testing/
+temp/
+
+# -------------------------
+# Generated Release Archives
+# Keep release source files, ignore generated ZIPs
+# -------------------------
+Releases/*.zip
+Exports/Releases/*.zip
+
+# -------------------------
+# Generated Python Bytecode
+# -------------------------
+*.pyc
+
+# -------------------------
+# Backup Files
+# -------------------------
+*.bak
+*.backup
+*~
+
+# -------------------------
+# Secrets / Local Config
+# Never commit credentials or private API keys
+# -------------------------
+.env.*
+!.env.example
+secrets/
+credentials/
