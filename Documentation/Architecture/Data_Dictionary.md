@@ -229,18 +229,19 @@ NSC-1000
 
 ## 3.2 Other Identifier Namespaces
 
-| Entity          | Field               | Format    |
-| --------------- | ------------------- | --------- |
-| Repeater        | `Repeater_ID`       | `RPT-###` |
-| Radio Model     | `Radio_Model_ID`    | `RMD-###` |
-| Radio Instance  | `Radio_Instance_ID` | `RDI-###` |
-| Location        | `Location_ID`       | `LOC-###` |
-| Source          | `Source_ID`         | `SRC-###` |
-| Export Profile  | `Export_Profile_ID` | `EXP-###` |
-| Verification    | `Verification_ID`   | `VER-###` |
-| Mission Profile | `Mission_ID`        | `MIS-###` |
-| Field Test      | `Test_ID`           | `TST-###` |
-| Data Change     | `Change_ID`         | `CHG-###` |
+| Entity          | Field                | Format    |
+| --------------- | --------------------  | --------- |
+| Repeater        | `Repeater_ID`        | `RPT-###` |
+| Radio Model     | `Radio_Model_ID`     | `RMD-###` |
+| Radio Instance  | `Radio_Instance_ID`  | `RDI-###` |
+| Radio Capability| `Radio_Capability_ID`| `RDI-###` |
+| Location        | `Location_ID`        | `LOC-###` |
+| Source          | `Source_ID`          | `SRC-###` |
+| Export Profile  | `Export_Profile_ID`  | `EXP-###` |
+| Verification    | `Verification_ID`    | `VER-###` |
+| Mission Profile | `Mission_ID`         | `MIS-###` |
+| Field Test      | `Test_ID`            | `TST-###` |
+| Data Change     | `Change_ID`          | `CHG-###` |
 
 ---
 
@@ -1299,10 +1300,22 @@ References:
 
 ```text
 RADIO_MODELS.Radio_Model_ID
+
 ```
 
----
+### `Radio_Capability_ID`
 
+**Type:** TEXT  
+**Required:** Yes  
+**Unique:** Yes  
+**Primary Key:** Yes
+
+Permanent identifier for an individual radio capability record.
+
+Format:
+
+```text
+RCP-###
 ### `Capability_Type`
 
 **Type:** ENUM
