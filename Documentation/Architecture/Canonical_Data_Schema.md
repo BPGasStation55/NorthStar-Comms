@@ -186,6 +186,7 @@ The following identifier namespaces are established.
 | Repeater            | `RPT-###` | `RPT-001` |
 | Radio Model         | `RMD-###` | `RMD-001` |
 | Radio Instance      | `RDI-###` | `RDI-001` |
+| Radio Capability    | `RCP-###` | `RCP-001` |
 | Location            | `LOC-###` | `LOC-001` |
 | Source              | `SRC-###` | `SRC-001` |
 | Export Profile      | `EXP-###` | `EXP-001` |
@@ -685,20 +686,25 @@ Another row may define a separate UHF range.
 
 ## Fields
 
-| Field               | Type    |
-| ------------------- | ------- |
-| `Radio_Model_ID`    | FK      |
-| `Capability_Type`   | Enum    |
-| `Frequency_Min_MHz` | Decimal |
-| `Frequency_Max_MHz` | Decimal |
-| `Modulation`        | Enum    |
-| `Transmit_Capable`  | Boolean |
-| `Receive_Capable`   | Boolean |
-| `Notes`             | Text    |
+| Field                  | Type    |
+| ---------------------- | ------- |
+| `Radio_Capability_ID`  | Text    |
+| `Radio_Model_ID`       | FK      |
+| `Capability_Type`      | Enum    |
+| `Frequency_Min_MHz`    | Decimal |
+| `Frequency_Max_MHz`    | Decimal |
+| `Modulation`           | Enum    |
+| `Transmit_Capable`     | Boolean |
+| `Receive_Capable`      | Boolean |
+| `Notes`                | Text    |
 
 This table describes technical capability.
 
 It does not imply regulatory authorization to transmit.
+
+`Radio_Capability_ID` uses the stable `RCP-###` namespace.
+
+Each capability record must have a unique and immutable identifier so that verification history, change tracking, and future database relationships can reference a specific capability record.
 
 ---
 
