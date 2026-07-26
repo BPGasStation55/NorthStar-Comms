@@ -154,7 +154,24 @@ Target capabilities:
 - Release management process
 
 ---
+## [2.0.0] - Unreleased
 
+### Added
+- Canonical 128-channel radio-independent NSC database.
+- Verified GM25/GM-15 Pro CHIRP export profile based on a direct CHIRP export.
+- Verified UV32 CPS export profile.
+- Provisional UV-5R Baofeng stock-software export profile.
+- Standard-library export generation and validation scripts.
+- Automated checks for sequential NSC IDs, naming limits, and GM25 fixed memories.
+
+### Changed
+- Radio programming CSV files are now generated artifacts rather than independently maintained source files.
+- GM25 memories 1–30 preserve the radio/driver fixed-channel constraints while retaining canonical NSC identities.
+
+### Known limitations
+- The supplied UV-5R `.dat` file is a radio image and does not expose the stock software CSV schema. The UV-5R adapter uses previously confirmed headers pending a direct CSV export.
+
+---
 # Release Notes Format
 
 Future releases should document:

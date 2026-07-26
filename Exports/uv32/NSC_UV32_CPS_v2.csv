@@ -1,0 +1,129 @@
+﻿Channel #,Name,Type,RX Frequency,TX Frequency,Power,Width,CTS/DCS Decode,CTS/DCE Encode,Color Code,TX Contact,RX Group List,Time Slot
+1,GMRS 01,Analog,462.562500,462.562500,High,25KHz,None,None,None,None,None,None
+2,GMRS 02,Analog,462.587500,462.587500,High,25KHz,None,None,None,None,None,None
+3,GMRS 03,Analog,462.612500,462.612500,High,25KHz,None,None,None,None,None,None
+4,GMRS 04,Analog,462.637500,462.637500,High,25KHz,None,None,None,None,None,None
+5,GMRS 05,Analog,462.662500,462.662500,High,25KHz,None,None,None,None,None,None
+6,GMRS 06,Analog,462.687500,462.687500,High,25KHz,None,None,None,None,None,None
+7,GMRS 07,Analog,462.712500,462.712500,High,25KHz,None,None,None,None,None,None
+8,GMRS 08,Analog,467.562500,467.562500,Low,12.5KHz,None,None,None,None,None,None
+9,GMRS 09,Analog,467.587500,467.587500,Low,12.5KHz,None,None,None,None,None,None
+10,GMRS 10,Analog,467.612500,467.612500,Low,12.5KHz,None,None,None,None,None,None
+11,GMRS 11,Analog,467.637500,467.637500,Low,12.5KHz,None,None,None,None,None,None
+12,GMRS 12,Analog,467.662500,467.662500,Low,12.5KHz,None,None,None,None,None,None
+13,GMRS 13,Analog,467.687500,467.687500,Low,12.5KHz,None,None,None,None,None,None
+14,GMRS 14,Analog,467.712500,467.712500,Low,12.5KHz,None,None,None,None,None,None
+15,GMRS 15,Analog,462.550000,462.550000,High,25KHz,None,None,None,None,None,None
+16,GMRS 16,Analog,462.575000,462.575000,High,25KHz,None,None,None,None,None,None
+17,GMRS 17,Analog,462.600000,462.600000,High,25KHz,None,None,None,None,None,None
+18,GMRS 18,Analog,462.625000,462.625000,High,25KHz,None,None,None,None,None,None
+19,GMRS 19,Analog,462.650000,462.650000,High,25KHz,None,None,None,None,None,None
+20,GMRS 20,Analog,462.675000,462.675000,High,25KHz,None,None,None,None,None,None
+21,GMRS 21,Analog,462.700000,462.700000,High,25KHz,None,None,None,None,None,None
+22,GMRS 22,Analog,462.725000,462.725000,High,25KHz,None,None,None,None,None,None
+23,GMRS RPT 1,Analog,462.550000,467.550000,High,25KHz,None,None,None,None,None,None
+24,GMRS RPT 2,Analog,462.575000,467.575000,High,25KHz,None,None,None,None,None,None
+25,GMRS RPT 3,Analog,462.600000,467.600000,High,25KHz,None,None,None,None,None,None
+26,GMRS RPT 4,Analog,462.625000,467.625000,High,25KHz,None,None,None,None,None,None
+27,GMRS RPT 5,Analog,462.650000,467.650000,High,25KHz,None,None,None,None,None,None
+28,GMRS RPT 6,Analog,462.675000,467.675000,High,25KHz,None,None,None,None,None,None
+29,GMRS RPT 7,Analog,462.700000,467.700000,High,25KHz,None,None,None,None,None,None
+30,GMRS RPT 8,Analog,462.725000,467.725000,High,25KHz,None,None,None,None,None,None
+31,GMRS DIY 1,Analog,462.550000,467.550000,High,25KHz,None,None,None,None,None,None
+32,GMRS DIY 2,Analog,462.575000,467.575000,High,25KHz,None,None,None,None,None,None
+33,GMRS DIY 3,Analog,462.600000,467.600000,High,25KHz,None,None,None,None,None,None
+34,GMRS DIY 4,Analog,462.625000,467.625000,High,25KHz,None,None,None,None,None,None
+35,GMRS DIY 5,Analog,462.650000,467.650000,High,25KHz,None,None,None,None,None,None
+36,GMRS DIY 6,Analog,462.675000,467.675000,High,25KHz,None,None,None,None,None,None
+37,GMRS DIY 7,Analog,462.700000,467.700000,High,25KHz,None,None,None,None,None,None
+38,GMRS DIY 8,Analog,462.725000,467.725000,High,25KHz,None,None,None,None,None,None
+39,GMRS DIY 9,Analog,462.550000,467.550000,High,25KHz,None,None,None,None,None,None
+40,GMRS DIY 10,Analog,462.575000,467.575000,High,25KHz,None,None,None,None,None,None
+41,GMRS DIY 11,Analog,462.600000,467.600000,High,25KHz,None,None,None,None,None,None
+42,GMRS DIY 12,Analog,462.625000,467.625000,High,25KHz,None,None,None,None,None,None
+43,GMRS DIY 13,Analog,462.650000,467.650000,High,25KHz,None,None,None,None,None,None
+44,GMRS DIY 14,Analog,462.675000,467.675000,High,25KHz,None,None,None,None,None,None
+45,GMRS DIY 15,Analog,462.700000,467.700000,High,25KHz,None,None,None,None,None,None
+46,GMRS DIY 16,Analog,462.725000,467.725000,High,25KHz,None,None,None,None,None,None
+47,GMRS DIY 17,Analog,462.550000,467.550000,High,25KHz,None,None,None,None,None,None
+48,GMRS DIY 18,Analog,462.575000,467.575000,High,25KHz,None,None,None,None,None,None
+49,GMRS DIY 19,Analog,462.600000,467.600000,High,25KHz,None,None,None,None,None,None
+50,GMRS DIY 20,Analog,462.625000,467.625000,High,25KHz,None,None,None,None,None,None
+51,GMRS DIY 21,Analog,462.650000,467.650000,High,25KHz,None,None,None,None,None,None
+52,GMRS DIY 22,Analog,462.675000,467.675000,High,25KHz,None,None,None,None,None,None
+53,GMRS DIY 23,Analog,462.700000,467.700000,High,25KHz,None,None,None,None,None,None
+54,GMRS DIY 24,Analog,462.725000,467.725000,High,25KHz,None,None,None,None,None,None
+55,FAMILY PRIMARY,Analog,462.550000,462.550000,High,25KHz,None,None,None,None,None,None
+56,FAMILY ALT,Analog,462.575000,462.575000,High,25KHz,None,None,None,None,None,None
+57,CONVOY,Analog,462.600000,462.600000,High,25KHz,None,None,None,None,None,None
+58,BASE CAMP,Analog,462.625000,462.625000,High,25KHz,None,None,None,None,None,None
+59,RECOVERY,Analog,462.650000,462.650000,High,25KHz,None,None,None,None,None,None
+60,MEDICAL,Analog,462.675000,462.675000,High,25KHz,None,None,None,None,None,None
+61,CHECK IN,Analog,462.700000,462.700000,High,25KHz,None,None,None,None,None,None
+62,EMERGENCY,Analog,462.725000,462.725000,High,25KHz,None,None,None,None,None,None
+63,GROUP A,Analog,462.562500,462.562500,High,25KHz,None,None,None,None,None,None
+64,GROUP B,Analog,462.587500,462.587500,High,25KHz,None,None,None,None,None,None
+65,NOAA WX 1,Analog,162.400000,162.400000,Low,25KHz,None,None,None,None,None,None
+66,NOAA WX 2,Analog,162.425000,162.425000,Low,25KHz,None,None,None,None,None,None
+67,NOAA WX 3,Analog,162.450000,162.450000,Low,25KHz,None,None,None,None,None,None
+68,NOAA WX 4,Analog,162.475000,162.475000,Low,25KHz,None,None,None,None,None,None
+69,NOAA WX 5,Analog,162.500000,162.500000,Low,25KHz,None,None,None,None,None,None
+70,NOAA WX 6,Analog,162.525000,162.525000,Low,25KHz,None,None,None,None,None,None
+71,NOAA WX 7,Analog,162.550000,162.550000,Low,25KHz,None,None,None,None,None,None
+72,MURS 1,Analog,151.820000,151.820000,Low,12.5KHz,None,None,None,None,None,None
+73,MURS 2,Analog,151.880000,151.880000,Low,12.5KHz,None,None,None,None,None,None
+74,MURS 3,Analog,151.940000,151.940000,Low,12.5KHz,None,None,None,None,None,None
+75,MURS 4,Analog,154.570000,154.570000,Low,12.5KHz,None,None,None,None,None,None
+76,MURS 5,Analog,154.600000,154.600000,Low,12.5KHz,None,None,None,None,None,None
+77,2M CALL,Analog,146.520000,146.520000,High,25KHz,None,None,None,None,None,None
+78,2M ALT1,Analog,146.550000,146.550000,High,25KHz,None,None,None,None,None,None
+79,2M ALT2,Analog,146.580000,146.580000,High,25KHz,None,None,None,None,None,None
+80,2M AUX1,Analog,147.420000,147.420000,High,25KHz,None,None,None,None,None,None
+81,70CM CALL,Analog,446.000000,446.000000,High,25KHz,None,None,None,None,None,None
+82,70CM ALT1,Analog,446.025000,446.025000,High,25KHz,None,None,None,None,None,None
+83,70CM ALT2,Analog,446.050000,446.050000,High,25KHz,None,None,None,None,None,None
+84,70CM AUX1,Analog,446.075000,446.075000,High,25KHz,None,None,None,None,None,None
+85,AIR EMERGENCY,Analog,121.500000,121.500000,Low,12.5KHz,None,None,None,None,None,None
+86,AIR UNICOM,Analog,122.800000,122.800000,Low,12.5KHz,None,None,None,None,None,None
+87,MARINE 16,Analog,156.800000,156.800000,Low,12.5KHz,None,None,None,None,None,None
+88,MARINE 22A,Analog,157.100000,157.100000,Low,12.5KHz,None,None,None,None,None,None
+89,RAIL AAR 07,Analog,160.215000,160.215000,Low,12.5KHz,None,None,None,None,None,None
+90,RESERVED 90,Analog,144.000000,144.000000,Low,12.5KHz,None,None,None,None,None,None
+91,RESERVED 91,Analog,144.000000,144.000000,Low,12.5KHz,None,None,None,None,None,None
+92,RESERVED 92,Analog,144.000000,144.000000,Low,12.5KHz,None,None,None,None,None,None
+93,RESERVED 93,Analog,144.000000,144.000000,Low,12.5KHz,None,None,None,None,None,None
+94,RESERVED 94,Analog,144.000000,144.000000,Low,12.5KHz,None,None,None,None,None,None
+95,RESERVED 95,Analog,144.000000,144.000000,Low,12.5KHz,None,None,None,None,None,None
+96,RESERVED 96,Analog,144.000000,144.000000,Low,12.5KHz,None,None,None,None,None,None
+97,RESERVED 97,Analog,144.000000,144.000000,Low,12.5KHz,None,None,None,None,None,None
+98,RESERVED 98,Analog,144.000000,144.000000,Low,12.5KHz,None,None,None,None,None,None
+99,RESERVED 99,Analog,144.000000,144.000000,Low,12.5KHz,None,None,None,None,None,None
+100,RESERVED 100,Analog,144.000000,144.000000,Low,12.5KHz,None,None,None,None,None,None
+101,RESERVED 101,Analog,144.000000,144.000000,Low,12.5KHz,None,None,None,None,None,None
+102,RESERVED 102,Analog,144.000000,144.000000,Low,12.5KHz,None,None,None,None,None,None
+103,RESERVED 103,Analog,144.000000,144.000000,Low,12.5KHz,None,None,None,None,None,None
+104,RESERVED 104,Analog,144.000000,144.000000,Low,12.5KHz,None,None,None,None,None,None
+105,RESERVED 105,Analog,144.000000,144.000000,Low,12.5KHz,None,None,None,None,None,None
+106,RESERVED 106,Analog,144.000000,144.000000,Low,12.5KHz,None,None,None,None,None,None
+107,RESERVED 107,Analog,144.000000,144.000000,Low,12.5KHz,None,None,None,None,None,None
+108,RESERVED 108,Analog,144.000000,144.000000,Low,12.5KHz,None,None,None,None,None,None
+109,RESERVED 109,Analog,144.000000,144.000000,Low,12.5KHz,None,None,None,None,None,None
+110,RESERVED 110,Analog,144.000000,144.000000,Low,12.5KHz,None,None,None,None,None,None
+111,RESERVED 111,Analog,144.000000,144.000000,Low,12.5KHz,None,None,None,None,None,None
+112,RESERVED 112,Analog,144.000000,144.000000,Low,12.5KHz,None,None,None,None,None,None
+113,RESERVED 113,Analog,144.000000,144.000000,Low,12.5KHz,None,None,None,None,None,None
+114,RESERVED 114,Analog,144.000000,144.000000,Low,12.5KHz,None,None,None,None,None,None
+115,RESERVED 115,Analog,144.000000,144.000000,Low,12.5KHz,None,None,None,None,None,None
+116,RESERVED 116,Analog,144.000000,144.000000,Low,12.5KHz,None,None,None,None,None,None
+117,RESERVED 117,Analog,144.000000,144.000000,Low,12.5KHz,None,None,None,None,None,None
+118,RESERVED 118,Analog,144.000000,144.000000,Low,12.5KHz,None,None,None,None,None,None
+119,RESERVED 119,Analog,144.000000,144.000000,Low,12.5KHz,None,None,None,None,None,None
+120,RESERVED 120,Analog,144.000000,144.000000,Low,12.5KHz,None,None,None,None,None,None
+121,RESERVED 121,Analog,144.000000,144.000000,Low,12.5KHz,None,None,None,None,None,None
+122,RESERVED 122,Analog,144.000000,144.000000,Low,12.5KHz,None,None,None,None,None,None
+123,RESERVED 123,Analog,144.000000,144.000000,Low,12.5KHz,None,None,None,None,None,None
+124,RESERVED 124,Analog,144.000000,144.000000,Low,12.5KHz,None,None,None,None,None,None
+125,RESERVED 125,Analog,144.000000,144.000000,Low,12.5KHz,None,None,None,None,None,None
+126,RESERVED 126,Analog,144.000000,144.000000,Low,12.5KHz,None,None,None,None,None,None
+127,RESERVED 127,Analog,144.000000,144.000000,Low,12.5KHz,None,None,None,None,None,None
+128,RESERVED 128,Analog,144.000000,144.000000,Low,12.5KHz,None,None,None,None,None,None

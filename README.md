@@ -216,6 +216,36 @@ Examples:
 
 ---
 
+## Version 2 build architecture
+
+NorthStar Comms uses a canonical, radio-independent channel database. Radio programming files are generated from `data/master_channels.csv` through radio-specific profiles and exporter logic.
+
+```text
+data/master_channels.csv
+        │
+        ├── profiles/gm25_chirp.json
+        ├── profiles/uv5r_baofeng_stock.json
+        └── profiles/uv32_cps.json
+                │
+                ▼
+        scripts/build_exports.py
+                │
+                ├── exports/gm25/
+                ├── exports/uv5r/
+                └── exports/uv32/
+```
+
+Generated exports are not authoritative source files and should not be edited manually. Make changes in the canonical data or the appropriate radio profile, validate, and rebuild.
+
+```bash
+python scripts/validate_nsc.py
+python scripts/build_exports.py --radio all
+```
+
+The canonical NSC ID remains stable even when a radio requires different memory positions, names, field labels, or software-specific values.
+
+---
+
 # Contributing
 
 Contributions are welcome.

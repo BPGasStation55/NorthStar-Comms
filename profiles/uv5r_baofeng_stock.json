@@ -1,0 +1,36 @@
+{
+  "profile_id": "uv5r_baofeng_stock",
+  "radio": "Baofeng UV-5R",
+  "software": "Baofeng stock programming software",
+  "status": "provisional_headers_previously_confirmed",
+  "source_note": "Uploaded .dat is a radio image, not a CSV schema export.",
+  "memory_count": 128,
+  "export_count": 128,
+  "headers": [
+    "Channel",
+    "Band",
+    "RX Frequency",
+    "TX Frequency",
+    "CTCSS/DCS Dec",
+    "CTCSS/DCS Enc",
+    "TX Power",
+    "W/N",
+    "PTT-ID",
+    "BusyLock",
+    "Scan_Add",
+    "SigCode",
+    "CH-Name"
+  ],
+  "defaults": {
+    "PTT-ID": "None",
+    "BusyLock": "Yes",
+    "Scan_Add": "Yes",
+    "SigCode": "1"
+  },
+  "power_values": [
+    "Low",
+    "Mid",
+    "High"
+  ],
+  "disabled_value": "None"
+}

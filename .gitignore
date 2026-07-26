@@ -95,3 +95,14 @@ Exports/Releases/*.zip
 !.env.example
 secrets/
 credentials/
+
+# NSC generated/transient files
+__pycache__/
+.pytest_cache/
+*.pyc
+*.tmp
+*.bak
+
+# Keep generated release exports tracked unless project policy changes.
+# To stop tracking generated exports later, uncomment:
+# exports/**/*.csv
