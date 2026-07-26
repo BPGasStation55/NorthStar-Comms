@@ -1,0 +1,56 @@
+{
+  "profile_id": "gm25_chirp",
+  "radio": "Baofeng GM-15 Pro / GM25 class",
+  "software": "CHIRP",
+  "status": "verified_from_direct_export",
+  "memory_count": 250,
+  "export_count": 128,
+  "name_limit": 6,
+  "fixed_memory_rules": {
+    "1-22": "frequency fixed to standard GMRS simplex",
+    "23-30": "frequency pair fixed to standard GMRS repeater pairs",
+    "31-250": "programmable subject to driver/radio capability"
+  },
+  "headers": [
+    "Location",
+    "Name",
+    "Frequency",
+    "Duplex",
+    "Offset",
+    "Tone",
+    "rToneFreq",
+    "cToneFreq",
+    "DtcsCode",
+    "DtcsPolarity",
+    "RxDtcsCode",
+    "CrossMode",
+    "Mode",
+    "TStep",
+    "Skip",
+    "Power",
+    "Comment",
+    "URCALL",
+    "RPT1CALL",
+    "RPT2CALL",
+    "DVCODE"
+  ],
+  "defaults": {
+    "Offset": "0.600000",
+    "rToneFreq": "88.5",
+    "cToneFreq": "88.5",
+    "DtcsCode": "023",
+    "DtcsPolarity": "NN",
+    "RxDtcsCode": "023",
+    "CrossMode": "Tone->Tone",
+    "TStep": "5.00",
+    "URCALL": "",
+    "RPT1CALL": "",
+    "RPT2CALL": "",
+    "DVCODE": ""
+  },
+  "power_map": {
+    "High": "3.0W",
+    "Low": "0.5W"
+  },
+  "receive_only_duplex": "off"
+}
