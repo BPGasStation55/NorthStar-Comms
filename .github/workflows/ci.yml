@@ -1,0 +1,27 @@
+name: Validate baseline
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Validate canonical data
+        run: python scripts/validate_nsc.py
+      - name: Rebuild test artifacts
+        run: python scripts/build_exports.py --radio all
+      - name: Verify generated artifacts are current
+        run: git diff --exit-code -- exports/test
+      - name: Run tests
+        run: python -m unittest discover -s tests -v
+      - name: Verify checksums
+        run: sha256sum -c SHA256SUMS.txt

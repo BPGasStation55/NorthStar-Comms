@@ -1,5 +1,7 @@
 # NorthStar-Comms Radio Capability Profiles
 
+> **Architecture reference:** Active export gates are defined in `profiles/*.json`. UV-32 and DM-32UV are separate models; the UV-32 reference profile does not validate DM-32UV programming.
+
 **Document Status:** Initial Hardware Capability Baseline  
 **Target Release:** v0.2.0  
 **Milestone:** Milestone 1 - Master Database Foundation  

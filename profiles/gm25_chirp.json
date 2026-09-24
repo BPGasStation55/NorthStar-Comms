@@ -1,38 +1,21 @@
 {
   "profile_id": "gm25_chirp",
-  "radio": "Baofeng GM-15 Pro / GM25 class",
+  "radio_model_id": "RMD-002",
+  "radio": "Baofeng GM-15 Pro / GM25 CHIRP family",
   "software": "CHIRP",
-  "status": "verified_from_direct_export",
+  "schema_status": "verified_from_direct_export",
+  "hardware_validation_status": "pending",
+  "export_enabled": true,
+  "production_release_enabled": false,
   "memory_count": 250,
-  "export_count": 128,
   "name_limit": 6,
-  "fixed_memory_rules": {
-    "1-22": "frequency fixed to standard GMRS simplex",
-    "23-30": "frequency pair fixed to standard GMRS repeater pairs",
-    "31-250": "programmable subject to driver/radio capability"
-  },
+  "receive_ranges_mhz": [[136.0, 174.0], [400.0, 512.0]],
+  "transmit_services": ["GMRS"],
   "headers": [
-    "Location",
-    "Name",
-    "Frequency",
-    "Duplex",
-    "Offset",
-    "Tone",
-    "rToneFreq",
-    "cToneFreq",
-    "DtcsCode",
-    "DtcsPolarity",
-    "RxDtcsCode",
-    "CrossMode",
-    "Mode",
-    "TStep",
-    "Skip",
-    "Power",
-    "Comment",
-    "URCALL",
-    "RPT1CALL",
-    "RPT2CALL",
-    "DVCODE"
+    "Location", "Name", "Frequency", "Duplex", "Offset", "Tone",
+    "rToneFreq", "cToneFreq", "DtcsCode", "DtcsPolarity", "RxDtcsCode",
+    "CrossMode", "Mode", "TStep", "Skip", "Power", "Comment",
+    "URCALL", "RPT1CALL", "RPT2CALL", "DVCODE"
   ],
   "defaults": {
     "Offset": "0.600000",
@@ -42,15 +25,13 @@
     "DtcsPolarity": "NN",
     "RxDtcsCode": "023",
     "CrossMode": "Tone->Tone",
-    "TStep": "5.00",
-    "URCALL": "",
-    "RPT1CALL": "",
-    "RPT2CALL": "",
-    "DVCODE": ""
+    "TStep": "5.00"
   },
-  "power_map": {
-    "High": "3.0W",
-    "Low": "0.5W"
-  },
-  "receive_only_duplex": "off"
+  "power_map": {"HIGH": "3.0W", "LOW": "0.5W"},
+  "safety_policy": {
+    "unselected_tx_inhibited": true,
+    "receive_only_tx_inhibited": true,
+    "unsupported_service_tx_inhibited": true,
+    "blank_frequency_records_omitted": true
+  }
 }

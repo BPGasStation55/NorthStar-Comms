@@ -1,0 +1,5 @@
+radio_model_id,manufacturer,model,model_family,max_memories,channel_name_max_length,modes,support_status,owned_quantity,notes
+RMD-001,Baofeng,UV-5R,UV-5R Family,128,15,ANALOG_FM,BLOCKED_SCHEMA,2,Direct stock-software CSV and TX-inhibit encoding required.
+RMD-002,Baofeng,GM-15 Pro,GM25 / GM15 Pro CHIRP Family,250,6,ANALOG_FM,TEST_READY,2,Direct CHIRP export available; hardware validation pending.
+RMD-003,Baofeng,DM-32UV,DM-32UV Family,4000,15,ANALOG_FM|DMR,BLOCKED_SCHEMA,2,Direct DM-32UV CPS evidence required; one planned for GK01 and one for mobile/base use.
+RMD-004,Baofeng,UV-32,UV-32 Analog Family,999,15,ANALOG_FM,REFERENCE_ONLY,0,Separate analog model retained only to classify prior CPS evidence.

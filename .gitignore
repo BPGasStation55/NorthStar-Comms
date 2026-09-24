@@ -72,8 +72,8 @@ temp/
 # Generated Release Archives
 # Keep release source files, ignore generated ZIPs
 # -------------------------
-Releases/*.zip
-Exports/Releases/*.zip
+releases/*.zip
+exports/releases/*.zip
 
 # -------------------------
 # Generated Python Bytecode

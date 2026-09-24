@@ -1,5 +1,7 @@
 # NorthStar-Comms Canonical Data Schema
 
+> **Architecture reference:** The current executable canonical source is `data/master_channels.csv`. The legacy workbook entities described here remain a target data model, not a second editable channel source.
+
 **Document Status:** Initial Architecture
 **Target Release:** v0.2.0
 **Milestone:** Milestone 1 - Master Database Foundation
@@ -656,7 +658,8 @@ Initial radio models:
 ```text
 Baofeng UV-5R
 Baofeng GM25 / GM15 Pro
-Baofeng UV32 / DM32
+Baofeng DM-32UV
+Baofeng UV-32 (separate reference model)
 ```
 
 Exact model naming and capability distinctions will be validated before production use.
@@ -812,8 +815,11 @@ For the initial supported radios:
 GM25 / GM15 Pro:
 Maximum 6 characters
 
-UV32 / DM32:
+DM-32UV:
 Maximum 15 characters
+
+UV-32:
+Maximum 15 characters; separate analog reference model
 
 UV-5R:
 Maximum 15 characters

@@ -153,7 +153,7 @@ Canonical ID: NSC-043
 
 UV-5R Memory: 43
 GM25 Memory: 43
-UV32 Memory: 43
+DM-32UV Memory: 43
 Future Radio Memory: 115
 ```
 

@@ -1,35 +1,13 @@
 {
-  "profile_id": "uv32_cps",
-  "radio": "Baofeng DM32 / UV32",
-  "software": "Baofeng CPS",
-  "status": "verified_by_successful_import",
+  "profile_id": "uv32_cps_reference",
+  "radio_model_id": "RMD-004",
+  "radio": "Baofeng UV-32 analog radio",
+  "software": "Baofeng UV-32 CPS",
+  "schema_status": "reference_only",
+  "hardware_validation_status": "not_applicable_to_dm32uv",
+  "export_enabled": false,
+  "production_release_enabled": false,
   "memory_count": 999,
-  "export_count": 128,
   "name_limit": 15,
-  "headers": [
-    "Channel #",
-    "Name",
-    "Type",
-    "RX Frequency",
-    "TX Frequency",
-    "Power",
-    "Width",
-    "CTS/DCS Decode",
-    "CTS/DCE Encode",
-    "Color Code",
-    "TX Contact",
-    "RX Group List",
-    "Time Slot"
-  ],
-  "defaults": {
-    "Type": "Analog",
-    "Color Code": "None",
-    "TX Contact": "None",
-    "RX Group List": "None",
-    "Time Slot": "None"
-  },
-  "width_map": {
-    "FM": "25KHz",
-    "NFM": "12.5KHz"
-  }
+  "blocking_reason": "This successfully imported schema belongs to the analog UV-32 and is not evidence for the separate DM-32UV DMR radio."
 }

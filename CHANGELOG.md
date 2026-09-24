@@ -12,13 +12,28 @@ The project follows [Semantic Versioning](https://semver.org/):
 
 # [Unreleased]
 
-## Planned
+## Added
 
-- Master communications database
-- Radio export templates
-- CSV generation tools
-- Initial Baofeng codeplugs
-- Communications SOP documentation
+- Test-ready `v2.0.0-dev` baseline with 128 canonical positions.
+- Safe blank reserved positions instead of placeholder transmit frequencies.
+- Separate GM25, UV-5R, DM-32UV and UV-32 profiles.
+- Hardware-validation plan and result template.
+- Linux continuous integration and standard-library regression tests.
+- Current Icom ecosystem, kit and TAK scope decision documentation.
+
+## Changed
+
+- Repository-native canonical CSV data is now the sole editable channel source.
+- Repository directories use consistent lowercase paths.
+- GM25 output is explicitly test-only and forces TX off for receive-only, template and unsupported-service records.
+- Legacy Version 2 exports moved to `archive/legacy-v2-exports/`.
+- The Excel workbook is classified as a legacy schema/reference artifact until it can be generated from canonical data.
+
+## Safety
+
+- UV-5R and DM-32UV export generation is blocked pending direct CPS schema evidence.
+- UV-32 evidence is no longer treated as DM-32UV evidence.
+- Production release generation remains disabled pending physical validation.
 
 ---
 
@@ -77,7 +92,7 @@ Development targets established for:
 
 * Baofeng UV-5R
 * Baofeng GM25 / GM15 Pro
-* Baofeng UV32 / DM32
+* Baofeng UV32 / DM32 (historical target label; the models are separated in the current baseline)
 
 ## Next Milestone
 
@@ -154,7 +169,7 @@ Target capabilities:
 - Release management process
 
 ---
-## [2.0.0] - Unreleased
+## [2.0.0 migration overlay] - Historical
 
 ### Added
 - Canonical 128-channel radio-independent NSC database.

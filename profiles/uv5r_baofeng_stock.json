@@ -1,36 +1,15 @@
 {
   "profile_id": "uv5r_baofeng_stock",
+  "radio_model_id": "RMD-001",
   "radio": "Baofeng UV-5R",
   "software": "Baofeng stock programming software",
-  "status": "provisional_headers_previously_confirmed",
-  "source_note": "Uploaded .dat is a radio image, not a CSV schema export.",
+  "schema_status": "blocked_pending_direct_csv_export",
+  "hardware_validation_status": "pending",
+  "export_enabled": false,
+  "production_release_enabled": false,
   "memory_count": 128,
-  "export_count": 128,
-  "headers": [
-    "Channel",
-    "Band",
-    "RX Frequency",
-    "TX Frequency",
-    "CTCSS/DCS Dec",
-    "CTCSS/DCS Enc",
-    "TX Power",
-    "W/N",
-    "PTT-ID",
-    "BusyLock",
-    "Scan_Add",
-    "SigCode",
-    "CH-Name"
-  ],
-  "defaults": {
-    "PTT-ID": "None",
-    "BusyLock": "Yes",
-    "Scan_Add": "Yes",
-    "SigCode": "1"
-  },
-  "power_values": [
-    "Low",
-    "Mid",
-    "High"
-  ],
-  "disabled_value": "None"
+  "name_limit": 15,
+  "receive_ranges_mhz": [[65.0, 108.0], [136.0, 174.0], [400.0, 520.0]],
+  "transmit_services": ["AMATEUR"],
+  "blocking_reason": "The available .dat file is a radio image, not a CSV schema export. A direct stock-software CSV export and a verified receive-only encoding are required before generation is enabled."
 }

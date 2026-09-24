@@ -107,38 +107,19 @@ Contributions should be placed in the appropriate project directory.
 ```text
 NorthStar-Comms/
 │
-├── Database/
-│   ├── Master/
-│   ├── Repeaters/
-│   ├── Validation/
-│   └── Archive/
-│
-├── Exports/
-│   ├── CSV/
-│   ├── Codeplugs/
-│   └── Releases/
-│
-├── Documentation/
-│   ├── SOP/
-│   ├── Guides/
-│   ├── Reference_Cards/
-│   └── ICS/
-│
-├── Maps/
-│
-├── Scripts/
-│   ├── Build/
-│   ├── Validation/
-│   └── Utilities/
-│
-├── Assets/
-│
-├── Tests/
-│
-└── Archive/
+├── data/              Canonical editable data
+├── profiles/          Radio-specific policies and validation gates
+├── scripts/           Builders and validators
+├── tests/             Automated regression tests
+├── exports/test/      Generated test-only artifacts
+├── docs/              Architecture, decisions and procedures
+├── database/          Legacy workbook/reference material
+├── reference/         Direct source-format evidence
+└── archive/           Superseded artifacts retained for traceability
 ```
 
 Do not create new top-level folders without documenting the architectural reason.
+Do not manually edit generated files under `exports/`.
 
 ---
 

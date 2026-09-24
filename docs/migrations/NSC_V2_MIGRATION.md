@@ -1,5 +1,7 @@
 # NSC Version 2 Migration Guide
 
+> **Historical document:** This migration was completed before the test-ready baseline. Do not use the legacy export instructions below for current radio programming. Current commands and safety gates are documented in the repository README and `docs/validation/HARDWARE_VALIDATION_PLAN.md`.
+
 This kit is an **overlay for the existing NorthStar Comms repository**. It is not a new repository and it does not replace labor-intensive project documentation.
 
 ## Preserve Version 1 first

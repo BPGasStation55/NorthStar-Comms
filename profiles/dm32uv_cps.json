@@ -1,0 +1,16 @@
+{
+  "profile_id": "dm32uv_cps",
+  "radio_model_id": "RMD-003",
+  "radio": "Baofeng DM-32UV",
+  "software": "Baofeng DM-32UV CPS",
+  "schema_status": "blocked_pending_direct_cps_export",
+  "hardware_validation_status": "pending",
+  "export_enabled": false,
+  "production_release_enabled": false,
+  "memory_count": 4000,
+  "name_limit": 15,
+  "receive_ranges_mhz": [[65.0, 108.0], [108.0, 136.0], [136.0, 174.0], [400.0, 480.0]],
+  "transmit_ranges_mhz": [[136.0, 174.0], [400.0, 470.0]],
+  "transmit_services": ["AMATEUR", "DMR"],
+  "blocking_reason": "A direct DM-32UV CPS export is required to verify analog fields, receive-only encoding, DMR contacts, zones, scan lists, color codes and time slots."
+}

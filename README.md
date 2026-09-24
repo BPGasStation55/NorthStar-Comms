@@ -1,279 +1,90 @@
 # NorthStar-Comms
 
-> **NorthStar-Comms** is a comprehensive communications planning toolkit for amateur radio, GMRS, overlanding, emergency preparedness, volunteer response, and disaster communications.
+> **One Database. Every Radio. Every Mission.**
 
----
+NorthStar-Comms is an offline-first communications planning and radio-configuration toolkit for GMRS, amateur radio, monitoring, travel and prepared field operations.
 
-## Project Overview
+## Current status
 
-NorthStar-Comms is designed to provide a **single source of truth** for managing radio fleets, channel plans, repeaters, documentation, and communications planning.
+This repository is a **test-ready development baseline** for `v2.0.0-dev`.
 
-Unlike traditional radio codeplugs that are maintained separately for each radio, NorthStar-Comms uses a centralized database to automatically generate programming files, documentation, reference cards, and future mission plans.
+- Canonical channel data is maintained in `data/master_channels.csv`.
+- The 128 canonical positions use stable `NSC-001` through `NSC-128` identifiers.
+- All generated artifacts remain test-only until their exact CPS schema and physical radio behavior are validated.
+- Production release generation is disabled.
+- Legacy Version 2 exports are preserved in `archive/legacy-v2-exports/` and must not be imported.
 
-The long-term goal is to build a scalable communications platform suitable for:
+## Safety boundary
 
-- Amateur Radio Operators
-- GMRS Users
-- Overlanding Groups
-- Search & Rescue Teams
-- CERT Organizations
-- Volunteer Emergency Communications
-- Homesteads
-- Family Emergency Planning
-- Off-Road Recovery Teams
-- Incident Command System (ICS) Operations
+Only the GM-15 Pro/GM25 CHIRP schema currently has enough source evidence to generate a test artifact. Its exporter forces CHIRP `Duplex=off` for receive-only channels, templates and services that the radio profile is not authorized to transmit on.
 
----
+UV-5R and DM-32UV generation is blocked until direct exports from their actual programming software establish the exact schema and receive-only encoding. The separate UV-32 reference schema is not treated as DM-32UV evidence.
 
-# Project Goals
+No generated file is production-ready until CPS import, radio programming, receive-only behavior and functional hardware tests are recorded.
 
-- Maintain one master communications database
-- Automatically generate codeplugs for multiple radio models
-- Standardize channel numbering across every radio
-- Generate printable reference materials
-- Maintain verified repeater databases
-- Document communications procedures
-- Support future desktop and mobile applications
-- Build a long-term communications planning platform
+## Canonical 128-position structure
 
----
+| Positions | Purpose |
+|---|---|
+| 001–022 | Standard GMRS |
+| 023–030 | Generic GMRS repeater templates |
+| 031–050 | Verified local/travel GMRS repeater slots |
+| 051–057 | NOAA receive-only |
+| 058–062 | MURS receive-only in NSC profiles |
+| 063–080 | Amateur simplex |
+| 081–112 | Verified local amateur repeater slots |
+| 113–120 | Marine receive-only |
+| 121–128 | Railroad receive-only |
 
-# Current Supported Radios
+Unverified positions remain reserved with blank frequencies. Placeholder frequencies are not used.
 
-| Manufacturer | Model | Status |
-|--------------|-------|--------|
-| Baofeng | UV-5R | Planned |
-| Baofeng | GM25 / GM15 Pro | Planned |
-| Baofeng | UV32 / DM32 | Planned |
+## Build and validation
 
-Future planned support:
-
-- Yaesu
-- Icom
-- Kenwood
-- Motorola
-- BTECH
-- AnyTone
-- Midland
-- Retevis
-
----
-
-# Repository Structure
-
-```
-NorthStar-Comms/
-
-Database/
-CSV/
-Codeplugs/
-Documentation/
-Maps/
-Reference Cards/
-Vehicle/
-Base Station/
-Field Testing/
-Scripts/
-Releases/
-```
-
----
-
-# Development Roadmap
-
-## Version 0.1
-
-- Repository initialization
-- Documentation
-- Folder structure
-- Development standards
-
----
-
-## Version 0.2
-
-- Master communications database
-- Export templates
-- CSV generation
-- Validation engine
-
----
-
-## Version 0.3
-
-- Initial codeplugs
-- UV-5R
-- GM25
-- UV32
-
----
-
-## Version 0.4
-
-- Minnesota GMRS repeaters
-- Minnesota amateur repeaters
-- NOAA
-- MURS
-- FRS
-- National interoperability channels
-
----
-
-## Version 0.5
-
-- Reference cards
-- Programming guides
-- Communications SOP
-- Vehicle communications
-
----
-
-## Version 1.0
-
-Initial Stable Release
-
-Includes:
-
-- Master Database
-- CSV Generator
-- Verified Repeaters
-- Documentation
-- Reference Cards
-- Import Validation
-
----
-
-# Long-Term Vision
-
-NorthStar-Comms is intended to evolve into a complete communications management system.
-
-Future development includes:
-
-- Desktop application
-- Interactive repeater maps
-- Automatic CSV generation
-- PDF generation
-- ICS-205 Communications Plans
-- Vehicle communications planning
-- Portable repeater planning
-- Antenna planning
-- Equipment inventory
-- Battery runtime calculators
-- Field testing logs
-- GIS integration
-
----
-
-# Development Philosophy
-
-Everything starts with a single database.
-
-```
-Master Database
-
-        ↓
-
-Validation
-
-        ↓
-
-CSV Generator
-
-        ↓
-
-Radio Programming
-
-        ↓
-
-Reference Cards
-
-        ↓
-
-Documentation
-
-        ↓
-
-Release Package
-```
-
-No duplicate data.
-
-No manually maintaining multiple spreadsheets.
-
-One source of truth.
-
----
-
-# Versioning
-
-NorthStar-Comms follows Semantic Versioning.
-
-Examples:
-
-- v0.1.0
-- v0.2.0
-- v1.0.0
-
----
-
-## Version 2 build architecture
-
-NorthStar Comms uses a canonical, radio-independent channel database. Radio programming files are generated from `data/master_channels.csv` through radio-specific profiles and exporter logic.
-
-```text
-data/master_channels.csv
-        │
-        ├── profiles/gm25_chirp.json
-        ├── profiles/uv5r_baofeng_stock.json
-        └── profiles/uv32_cps.json
-                │
-                ▼
-        scripts/build_exports.py
-                │
-                ├── exports/gm25/
-                ├── exports/uv5r/
-                └── exports/uv32/
-```
-
-Generated exports are not authoritative source files and should not be edited manually. Make changes in the canonical data or the appropriate radio profile, validate, and rebuild.
+Python 3.11 or newer is sufficient; the baseline uses only the standard library.
 
 ```bash
 python scripts/validate_nsc.py
 python scripts/build_exports.py --radio all
+python -m unittest discover -s tests -v
+sha256sum -c SHA256SUMS.txt
 ```
 
-The canonical NSC ID remains stable even when a radio requires different memory positions, names, field labels, or software-specific values.
+Generated test artifacts are written under `exports/test/`. A profile that lacks sufficient evidence exits as blocked instead of creating a speculative file.
 
----
+## Radio profile status
 
-# Contributing
+| Radio | Schema | Test export | Production |
+|---|---|---:|---:|
+| GM-15 Pro / GM25 CHIRP family | Direct CHIRP reference available | Enabled | Blocked pending hardware validation |
+| UV-5R stock software | Direct CSV missing | Blocked | Blocked |
+| DM-32UV CPS | Direct CPS export missing | Blocked | Blocked |
+| UV-32 analog CPS | Reference only; separate model | Blocked | Not a DM-32UV target |
 
-Contributions are welcome.
+## Repository layout
 
-Current priorities include:
+```text
+data/                  Canonical editable data
+profiles/              Radio-specific capability and export gates
+scripts/               Validation and deterministic builders
+tests/                 Standard-library automated tests
+exports/test/          Generated test-only artifacts
+database/              Legacy workbook and database reference material
+docs/                  Architecture, decisions, kits and validation plans
+reference/             Source-format evidence
+archive/               Superseded artifacts retained for traceability
+```
 
-- Additional radio support
-- Repeater verification
-- Documentation improvements
-- Export templates
-- Testing
-- Bug reports
-- Feature requests
+The workbook at `database/master/Master_Radio_Database.xlsx` is retained as a legacy schema prototype. It is not an independently editable channel source and currently contains no canonical channel rows.
 
----
+## Current operational direction
 
-# Disclaimer
+- Icom is the selected primary future radio ecosystem.
+- The two existing DM-32UV radios remain the limited DMR allocation: one for the Grab Kit and one for a mobile/base role.
+- EK01 is the compact rapid-deployment receive and RF-awareness kit.
+- ATAK-CIV and WinTAK remain long-term integrations. TAK/CoT data remains separate from APRS and DMR GPS until a gateway is explicitly validated.
 
-This project is intended to assist users in organizing and documenting radio communications.
+See `docs/BASELINE_STATUS.md` and `docs/validation/HARDWARE_VALIDATION_PLAN.md` for the current gate status and required physical validation.
 
-Users are responsible for complying with all applicable local, state, and federal regulations, including FCC rules governing the Amateur Radio Service, GMRS, MURS, FRS, aviation, marine, and other radio services.
+## License and compliance
 
-This repository does **not** encourage or endorse operation outside the privileges granted by the user's license or equipment certification.
-
-Always verify frequencies, repeater access requirements, and licensing before transmitting.
-
----
-
-# License
-
-This project is licensed under the MIT License.
+The project is provided under the MIT License. Users remain responsible for licensing, equipment authorization, repeater permission and lawful operation. A technically programmable frequency is not automatically authorized for transmission.
