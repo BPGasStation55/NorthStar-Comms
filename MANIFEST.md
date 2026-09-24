@@ -1,20 +1,32 @@
-# NSC Version 2 Migration Kit
+# Test-Ready Baseline Manifest
 
-## Replace or add
+## Authoritative inputs
 
-| Kit path | Repository action |
+| Path | Role |
 |---|---|
-| `data/master_channels.csv` | Add as the Version 2 canonical source |
-| `profiles/*.json` | Add or merge into the existing profiles folder |
-| `scripts/build_exports.py` | Add; replace an older exporter only after comparing |
-| `scripts/validate_nsc.py` | Add |
-| `tests/test_build.py` | Add or merge into existing tests |
-| `exports/*/*.csv` | Generated test artifacts; replace older test exports |
-| `docs/migrations/NSC_V2_MIGRATION.md` | Add |
-| `snippets/README_V2_SECTION.md` | Copy section into existing README; do not replace README |
-| `snippets/CHANGELOG_V2_ENTRY.md` | Copy entry into existing CHANGELOG; do not replace CHANGELOG |
-| `snippets/GITIGNORE_ADDITIONS.txt` | Append relevant lines to existing `.gitignore` |
+| `data/master_channels.csv` | Canonical 128-position channel plan |
+| `data/radio_models.csv` | Canonical radio-model registry |
+| `profiles/gm25_chirp.json` | GM25 test-export policy |
+| `profiles/uv5r_baofeng_stock.json` | Blocked UV-5R profile and evidence requirement |
+| `profiles/dm32uv_cps.json` | Blocked DM-32UV profile and evidence requirement |
+| `profiles/uv32_cps.json` | Separate analog UV-32 reference profile |
 
-## Reference files
+## Executable controls
 
-The `reference/` directory preserves input formats used during migration analysis. These are not authoritative channel data.
+| Path | Role |
+|---|---|
+| `scripts/validate_nsc.py` | Canonical, profile and generated-export safety checks |
+| `scripts/build_exports.py` | Deterministic test-artifact builder |
+| `tests/test_baseline.py` | Standard-library regression suite |
+| `.github/workflows/ci.yml` | Linux continuous integration |
+| `SHA256SUMS.txt` | Integrity checks for baseline source and generated artifacts |
+
+## Generated artifacts
+
+Only `exports/test/` contains current generated artifacts. Every artifact and manifest is explicitly marked test-only.
+
+## Preserved references
+
+- `database/master/Master_Radio_Database.xlsx` is a legacy schema prototype, not an active channel source.
+- `reference/` contains source-format evidence.
+- `archive/legacy-v2-exports/` preserves superseded exports that must not be imported.

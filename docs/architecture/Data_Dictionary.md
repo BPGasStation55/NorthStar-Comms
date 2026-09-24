@@ -1,5 +1,7 @@
 # NorthStar-Comms Data Dictionary
 
+> **Architecture reference:** The current executable canonical source is `data/master_channels.csv`. Workbook tables remain a target model and must not be maintained as an independent channel source.
+
 **Document Status:** Initial Data Standard
 **Target Release:** v0.2.0
 **Milestone:** Milestone 1 - Master Database Foundation
@@ -1172,7 +1174,8 @@ Examples may include:
 
 ```text
 GM15 Pro / GM25 Family
-UV32 / DM32 Family
+DM-32UV Family
+UV-32 Analog Family (separate model)
 ```
 
 ---
@@ -1199,7 +1202,8 @@ Initial known project values:
 
 ```text
 GM25 / GM15 Pro: 6
-UV32 / DM32: 15
+DM-32UV: 15
+UV-32: 15 (separate model)
 UV-5R: 15
 ```
 
@@ -1316,6 +1320,8 @@ Format:
 
 ```text
 RCP-###
+```
+
 ### `Capability_Type`
 
 **Type:** ENUM
@@ -2456,7 +2462,7 @@ Detailed import-field mapping must be validated from an actual CPS export templa
 
 ---
 
-## UV32 / DM32
+## DM-32UV
 
 Known project constraint:
 
@@ -2466,6 +2472,8 @@ Maximum channel name:
 ```
 
 Detailed import-field mapping must be validated from an actual CPS export template before production generation.
+
+The analog UV-32 is a separate model. Its CPS schema is reference evidence only and must not be used to validate DM-32UV exports.
 
 ---
 

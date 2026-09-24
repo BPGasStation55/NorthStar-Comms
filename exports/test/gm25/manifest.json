@@ -1,0 +1,9 @@
+{
+  "artifact_status": "TEST_ONLY",
+  "profile_id": "gm25_chirp",
+  "schema_status": "verified_from_direct_export",
+  "hardware_validation_status": "pending",
+  "production_release_enabled": false,
+  "row_count": 53,
+  "safety": "All non-selected, receive-only and unsupported-service records use CHIRP duplex=off."
+}
